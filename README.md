@@ -46,44 +46,166 @@ This project demonstrates **EDA, preprocessing, feature engineering, multiple ML
 ## Plots
 
 **Correlation Heatmap of Features**
+
 ![Correlation Heatmap](images/correlation_heatmap.png)
 
+
 **Distribution of Bike Rental Counts**
+
 ![Distribtion of Bike Rental](images/distribution_of_bike_rental_count.png)
 
+
 **Bike Rentals by Season**
+
 ![Bike Rental by Season](images/bike_rental_by_season.png)
 
+
 **Hourly Bike Rentals(Workingday vs Non-Workingday)]**
+
 ![Hourly Bike Rentals](images/hourly_bike_rentals.png)
 
+
 **Bike Rentals by Weather Situation**
+
 ![Bike Rentals by Weather](images/bike_rental_by_weather.png)
 
+
 **Temperature vs Bike Rentals**
+
 ![Temperature vs Bike Rentals](images/temperature_vs_bike_rental.png)
 
+---
+
+ ## Exploratory Data Analysis & Key Insights
+
+This project focuses on forecasting hourly bike rental demand using machine learning models. Prior to model development, extensive exploratory data analysis (EDA) was conducted to understand the underlying patterns, relationships, and drivers of demand.
+
+
+
+1.**Correlation Analysis**
+
+A correlation heatmap was created to analyze linear relationships between numerical features and the target variable (count).
+
+- *Key Findings:*
+
+  - Hour of the day shows the strongest correlation with rental demand, highlighting the importance of time-based behavioral patterns.
+
+  - Temperature has a high positive correlation with demand, indicating increased bike usage during warmer conditions.
+
+  - Features such as humidity and wind speed exhibit weaker or negative correlations, suggesting a lesser influence on rental volume.
+
+- *Interpretation:*
+
+   -  Rental demand is heavily influenced by daily routines and weather comfort, making temporal and temperature features critical for accurate forecasting.
+
+2.**Seasonal Demand Distribution (Box Plot)**
+
+Box plots were used to visualize demand distribution across seasons.
+
+- *Observed Trend:*
+
+  - Summer exhibits the highest median and overall rental demand
+
+  - Followed by Spring, Fall, and Winter
+
+  - Winter shows lower medians with higher variability, indicating inconsistent usage due to adverse weather conditions
+
+- *Interpretation:*
+
+   - Seasonality plays a significant role in demand fluctuations, and seasonal indicators should be incorporated into the model to capture long-term trends.
+
+3.**Hourly Demand Patterns (Line Plots)**
+
+Hourly demand trends were analyzed separately for working days and weekends.
+
+- Working Days
+
+  - Two distinct peaks observed:
+
+  - Morning peak: 6–9 AM
+
+  - Evening peak: 4–8 PM
+
+These peaks align with commuting hours
+
+- Weekends
+
+   - Demand is more evenly distributed throughout the day
+
+   - Highest usage occurs between 12–5 PM
+
+   - Overall demand spread is wider compared to weekdays
+
+- *Interpretation:*
+
+  - Weekday demand is driven by commuter behavior, while weekend demand reflects leisure and recreational usage, leading to flatter but broader demand curves.
+
+4. **Temperature vs Demand Relationship (Scatter Plot)**
+
+A scatter plot was used to analyze the relationship between temperature and rental demand.
+
+- *Key Observations:*
+
+  - Rental demand increases steadily with temperature
+
+  - At higher temperatures, low rental counts are rare
+
+  - Indicates a strong monotonic relationship between comfort and usage
+
+- *Interpretation:*
+
+  - Temperature acts as a critical enabling factor for bike usage. Once favorable weather conditions are met, demand remains consistently high.
+
+---
+
+## Model Development
+
+- Multiple regression models were trained and evaluated:
+
+- XGBoost
+
+- Random Forest
+
+- Gradient Boosting
+
+- Neural Network
+
+---
+
+## Model Performance
+
 **Linear Regression: Actual vs Predicted**
+
 ![Linear Regression plot](images/linear_regression_actual_vs_predicted.png)
 
+
 **Random Forest: Actual vs Predicted**
+
 ![Random Forest plot](images/random_forest_actual_vs_predicted.png)
 
+
 **Gradient Boosting: Actual vs Predicted**
+
 ![Gradient Boosting plot](images/gradient_boosting_actual_vs_predicted.png)
 
+
 **XGBoost: Actual vs Predicted**
+
 ![XGBoost plot](images/xgboost_actual_vs_predicted.png)
 
+
 **Neural Network: Actual vs Predicted**
+
 ![Neural Network plot](images/neural_network_actual_vs_predicted.png)
 
+
 **Performance Comparison of all Models**
+
 ![Model Performace - all](images/model_performance.png)
 
 ---
 
-## Key Insights
+## Model Key Insights
 
 1.**Linear Regression**
 
