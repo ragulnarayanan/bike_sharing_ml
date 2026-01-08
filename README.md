@@ -239,6 +239,9 @@ A scatter plot was used to analyze the relationship between temperature and rent
 
 ## Summary
 
+Exploratory data analysis revealed that hour of the day and temperature are the strongest drivers of bike-sharing demand. Demand peaks during weekday commute hours (6–9 AM and 4–8 PM), while weekend usage is more evenly distributed with higher activity between 12–5 PM. Seasonal analysis showed summer has the highest demand, followed by spring, fall, and winter, and demand increases consistently with rising temperature, with few low-demand observations at high temperatures.
+
+
 Among all models tested for predicting bike-sharing demand, XGBoost and Random Forest performed best, achieving R² above 0.94, low RMSE (~40), and MAPE around 30–38%. Linear Regression underperformed due to its inability to capture nonlinear relationships. Neural Networks and Gradient Boosting showed decent performance but were less consistent for extreme demand values. Tree-based ensemble methods proved most effective for this real-world regression task
 
 
